@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+    <h1>Best Shop</h1>
+
+    <table >
+        <tr>
+            <th>Nr.</th>  
+            <th>Image</th> 
+            <th>Title</th> 
+            <th>Description</th> 
+            <th>Price</th> 
+            <th>Link to Amazon</th> 
+        </tr>
+
+        <tr>
+            <td>1</td>  
+            <td><img src="https://images.app.goo.gl/TudE2vGPn1eMFnBu6"></td> 
+            <td>The Book</td> 
+            <td>best roman</td> 
+            <td class="price">20</td> 
+            <td><a href="">The Book</a></td> 
+        </tr>
+
+        <tr>
+            <td>2</td>  
+            <td><img src="https://images.app.goo.gl/TGTx1TkUcoRqWpjx7"></td> 
+            <td>Ball</td> 
+            <td>oficial ball of UCL</td> 
+            <td class="price">100</td> 
+            <td><a href="">The Oficial Ball</a></td>
+        </tr>
+
+        <tr>
+            <td>3</td>  
+            <td><img src="https://www.google.com/imgres?imgurl=https://images.samsung.com/is/image/samsung/assets/ro/galaxy-s21/pcd/PCD_P_KV_Feature-Benefit_Black_720X752.png?$ORIGIN_PNG$&imgrefurl=https://www.samsung.com/ro/smartphones/&tbnid=szvr726xyND_tM&vet=1&docid=6DhsfNJWm2PMcM&w=720&h=752&source=sh/x/im"></td> 
+            <td>Smartphone</td> 
+            <td>samsung</td> 
+            <td class="price">300</td> 
+            <td><a href="">The Smartphone</a></td>
+        </tr>
+
+        <tr>
+            <td>4</td>  
+            <td><img src="https://images.app.goo.gl/ice4nkBE545P9skg6"></td> 
+            <td>SmartTV</td> 
+            <td>LG</td> 
+            <td class="price">500</td>
+            <td><a href="">The SmartTV</a></td> 
+        </tr>
+
+        <tr>
+            <td>5</td>  
+            <td><img src="https://images.app.goo.gl/9rCThb36RSXYR3q89"></td> 
+            <td>Laptop</td> 
+            <td>Lenovo</td> 
+            <td class="price">1000</td>
+            <td><a href="">The Laptop</a></td> 
+        </tr>
+        
+    </table>
+
+    <form>
+        <input type="textarea" placeholder="your mesage here">
+        <input type="submit" placeholder="submit">
+    </form>
+
+
+    <footer>
+       <p id="footerTitle">Best Shop</p>    
+       <p id="adress">IASI  ROMANIA</p>
+    </footer>
+    
+<script>
+
+ 
+
+    function changeHeading() {
+        let newHeading = document.querySelector('h1')
+        newHeading.style.color = "blue"
+        newHeading.style.textAlign = "center"
+    }
+    changeHeading()
+
+
+ 
+
+    function changeBackground() {
+        let newBackgroung = document.querySelector('body')
+        newBackgroung.style.background = "lightgreen"
+    }
+    changeBackground()
+
+
+    
+    function changeAdress() {
+        let fakeAdress = document.getElementById("adress")
+        fakeAdress.innerText = "Botswana"
+    }
+    changeAdress()
+
+
+
+    function addedClassesImg() {
+        let imgClasses = document.querySelectorAll('img')
+        for (i = 0; i < imgClasses.length; i++) {
+            imgClasses[i].classList.add("imgClass")
+        }
+    }
+    addedClassesImg()
+
+
+
+    function adjustImg() {
+        let newImg = document.getElementsByClassName('imgClass')
+        for (i = 0; i < newImg.length; i++) {
+            newImg[i].style.visibility = "hidden"
+        }
+    }
+    adjustImg()
+
+    function colorPrice() {
+        let colored = getElementsByClassName('price')
+        for(i = 0; i<colored.length; i++) {
+            colored[i].style.color = Math.floor(Math.random()*16777215).toString(16);
+//generates a random color -> #56eec7
+        }
+
+    }
+    colorPrice()
+
+
+
+</script>
+
+
+</body>
+</html>
+
+<!--
+
+You have been assigned to the creation of a Smartphone Shop Website. The homepage you're about to write is just a showcase of the products of the shop with some extra information. No shopping cart / checkout features are required.
+
+Complete exercises from 1 to 6 with plain HTML.
+
+EX1.: Add H1 title with the name of the shop
+
+EX2.: Add a TABLE with the top 5 products of the shop
+
+EX3.: Each product should have one image, title, description and price
+
+EX4.: Add the links to Amazon products for each item in the table
+
+EX5.: Add a footer with the address and the name of the shop
+
+EX6.: Add a message board where the user can type a message in it
+
+EXTRA (use JS here)
+
+EX7.: Write a function to change the H1 text
+
+EX8.: Write a function to change the page background color
+
+EX9.: Write a function to change the footer address with a fake one
+
+EX10.: Write a function to add a CSS class to every Amazon link
+
+EX11: Write a function to toggle a CSS class for all the images in the table; that class should set the visibility of the image
+
+EX12: Write a function to color the price of every product in a different one every time
+-->
