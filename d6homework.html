@@ -129,6 +129,8 @@
         let newImg = document.getElementsByClassName('imgClass')
         for (i = 0; i < newImg.length; i++) {
             newImg[i].style.width = "100px"
+            newImg[i].style.borderRadius = "8px"
+            newImg[i].style.border = "3px"
         }
     }
     adjustImg()
@@ -136,9 +138,10 @@
     function colorPrice() {
         let colored = getElementsByClassName('price')
         for(i = 0; i<colored.length; i++) {
-            colored[i].style.color = Math.floor(Math.random()*16777215).toString(16);
+            colored[i].style.color ="#"   + Math.floor(Math.random()*16777215).toString(16);
             //generates a random color -> #56eec7
         }
+
 
     }
     colorPrice()
